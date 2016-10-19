@@ -1,0 +1,483 @@
+/* ==========================================================================
+Base styles: opinionated defaults
+========================================================================== */
+
+@font-face {
+    font-family: 'ITCGalliardETW01-Roman';
+    src: url('font.woff') format('woff');
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family:'ITCGalliardETW01-Roman';
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+* {
+    outline: 0 !important;
+}
+
+
+/*
+ * jQuery Slider
+ */
+.ui-widget-header {
+    background: #f7fbff;
+    background: -moz-linear-gradient(left, #f7fbff 0%, #deebf7 14%, #c6dbef 24%, #9ecae1 37%, #6baed6 52%, #4292c6 65%, #2171b5 78%, #08519c 90%, #08306b 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f7fbff), color-stop(14%,#deebf7), color-stop(24%,#c6dbef), color-stop(37%,#9ecae1), color-stop(52%,#6baed6), color-stop(65%,#4292c6), color-stop(78%,#2171b5), color-stop(90%,#08519c), color-stop(100%,#08306b));
+    background: -webkit-linear-gradient(left, #f7fbff 0%,#deebf7 14%,#c6dbef 24%,#9ecae1 37%,#6baed6 52%,#4292c6 65%,#2171b5 78%,#08519c 90%,#08306b 100%);
+    background: linear-gradient(to right, #f7fbff 0%,#deebf7 14%,#c6dbef 24%,#9ecae1 37%,#6baed6 52%,#4292c6 65%,#2171b5 78%,#08519c 90%,#08306b 100%);
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+    border: none;
+    background-color: #ccc;
+}
+
+.ui-widget-content .ui-state-hover {
+    background-color: black;
+}
+.ui-widget-content .ui-state-active {
+    background-color: black;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.35em;
+    margin-left: -.2em;
+}
+
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 0.5em;
+    height: 1.5em;
+    cursor: default;
+}
+
+.tooltip {
+    position:absolute;
+    font-size: 0.9em;
+    z-index:99;
+    bottom: 80px;
+    color: #707070;
+}
+
+#unit {
+    font-size: 0.9em;
+    color: #707070;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+
+#title {
+    position: absolute;
+    top: 28px;
+    font-size: 1.2em;
+    left: 20px;
+}
+#sub-title {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    color: #707070; 
+}
+
+#data-select {
+    position: absolute;
+    top: 85px;
+    left: 20px;
+}
+
+#size-tag {
+    margin-bottom: 25px;
+}
+
+.tags {
+    color: #707070;
+    font-size: 0.8em;
+    margin-top: -10px;
+}
+
+/* ==========================================================================
+CHARTS
+========================================================================== */
+
+#chart {
+    position: relative;
+    left: -32px;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis {
+    font-size: 12px;
+}
+
+.bar {
+    fill: #707070;
+}
+
+.x path.domain {
+    display: none;
+}
+
+/* ==========================================================================
+Chrome Frame prompt
+========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+SVG VIZ
+========================================================================== */
+
+#background {
+    fill: none;
+    pointer-events: all;
+}
+
+#counties path {
+    stroke: #cccccc;
+    stroke-width: .25px;
+}
+
+.active {
+    stroke: #173d65;
+    stroke-width: 1px;
+    filter:url(#shadow);
+    width: 400px;
+    height: 400px;
+}
+
+.no-pws {
+    fill: #fff;
+}
+
+
+#states path {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.0px;
+}
+
+#states .selected {
+    stroke: none;
+}
+
+
+.mouseover {
+    stroke: rgb(224, 0, 73);
+    stroke-width: 1.5px;
+}
+
+/* ==========================================================================
+GUI
+========================================================================== */
+
+#slider {
+    width: 300px;
+    position: absolute;
+    bottom: 50px;
+    left: 25px;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-left: 80px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 100%);
+}
+
+#pws {
+    margin-left: -12px;
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top: 2px solid #e2e2e2;
+    border-bottom: 2px solid #e2e2e2;
+}
+#pws ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 12px;
+    padding-top: 7px;
+}
+
+#pws ul li {
+    white-space: nowrap;
+}
+
+#wrapper {
+    width: 1280px;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+Helper classes
+========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+              *text-indent: -9999px;
+          }
+
+          .ir:before {
+              content: "";
+              display: block;
+              width: 0;
+              height: 150%;
+          }
+
+          /*
+           * Hide from both screenreaders and browsers: h5bp.com/u
+           */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+Modify as content requires.
+========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+Print styles.
+Inlined to avoid required HTTP connection: h5bp.com/r
+========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+    content: "";
+}
+
+pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+
+thead {
+    display: table-header-group; /* h5bp.com/t */
+}
+
+tr,
+img {
+    page-break-inside: avoid;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+h2,
+h3 {
+    page-break-after: avoid;
+}
+}
